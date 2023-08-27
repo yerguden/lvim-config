@@ -1,0 +1,54 @@
+03:55:26.917 [info] Application logger started at :nonode@nohost
+03:55:26.917 [info] Application lexical_shared started at :nonode@nohost
+03:55:26.917 [info] Application common started at :nonode@nohost
+03:55:26.917 [info] Application elixir_sense started at :nonode@nohost
+03:55:26.917 [info] Application erts started at :nonode@nohost
+03:55:26.917 [info] Application jason started at :nonode@nohost
+03:55:26.917 [info] Application logger_file_backend started at :nonode@nohost
+03:55:26.917 [info] Application path_glob started at :nonode@nohost
+03:55:26.917 [info] Application proto started at :nonode@nohost
+03:55:26.917 [info] Application protocol started at :nonode@nohost
+03:55:26.917 [info] Child :ttb_autostart of Supervisor :runtime_tools_sup started
+Pid: #PID<0.1933.0>
+Start Call: :ttb_autostart.start_link()
+Restart: :temporary
+Shutdown: 3000
+Type: :worker
+03:55:26.917 [info] Application runtime_tools started at :nonode@nohost
+03:55:26.917 [info] Child LXRelease.Document.Store of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1938.0>
+Start Call: LXRelease.Document.Store.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+03:55:26.917 [info] Child LXRelease.Server of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1939.0>
+Start Call: LXRelease.Server.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+03:55:26.917 [info] Child LXRelease.Server.ProjectSupervisor of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1940.0>
+Start Call: DynamicSupervisor.start_link([name: LXRelease.Server.ProjectSupervisor, strategy: :one_for_one])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+03:55:26.917 [info] Child LXRelease.Server.Provider.Queue.Supervisor of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1941.0>
+Start Call: Task.Supervisor.start_link([name: LXRelease.Server.Provider.Queue.Supervisor])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+03:55:26.917 [info] Child LXRelease.Server.Provider.Queue of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1942.0>
+Start Call: LXRelease.Server.Provider.Queue.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+03:55:26.917 [info] Child LXRelease.Server.Transport.StdIO of Supervisor LXRelease.Server.Supervisor started
+Pid: #PID<0.1943.0>
+Start Call: LXRelease.Server.Transport.StdIO.start_link(:standard_io, &LXRelease.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+03:55:26.917 [info] Application server started at :nonode@nohost
