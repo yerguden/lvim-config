@@ -1,0 +1,12 @@
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     opts = {
+--       servers = {
+--         elixirls = {
+--           enabled = false, -- Disable elixir-ls if it keeps installing automatically
+--         },
+--       },
+--     },
+--   },
+-- }
