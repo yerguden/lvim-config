@@ -34,8 +34,6 @@ lspconfig.tailwindcss.setup({
     },
   },
 })
---
-local root_dir = vim.fn.getcwd()
 local schema_path = "/Users/yuko/legal-intake/deployables/api/schema.graphql"
 -- Configure GraphQL Language Server with schema path relative to project root
 lspconfig.graphql.setup({
@@ -47,4 +45,5 @@ lspconfig.graphql.setup({
     },
   },
 })
+
 vim.opt.shell = "/bin/bash"
