@@ -2,10 +2,11 @@
   "extras": [
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.elixir",
-    "lazyvim.plugins.extras.lang.typescript"
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.ui.treesitter-context"
   ],
   "news": {
-    "NEWS.md": "7107"
+    "NEWS.md": "10960"
   },
   "version": 7
 }
